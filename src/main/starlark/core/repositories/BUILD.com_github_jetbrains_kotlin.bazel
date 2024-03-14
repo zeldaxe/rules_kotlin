@@ -13,8 +13,6 @@
 # limitations under the License.
 package(default_visibility = ["//visibility:public"])
 
-load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
-
 # Kotlin home filegroup containing everything that is needed.
 [
     filegroup(
@@ -27,9 +25,4 @@ load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 filegroup(
     name = "home",
     srcs = glob(["**"]),
-)
-
-bzl_library(
-    name = "capabilities",
-    srcs = ["capabilities.bzl"],
 )
